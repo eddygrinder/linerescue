@@ -1,0 +1,10 @@
+#line 1 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\.vscode\\settings.json"
+{
+    "arduino.useArduinoCli": true,
+    "arduino.commandPath": "C:\\Program Files\\Arduino CLI\\arduino-cli.exe",
+    "arduino.sketchbookPath": "C:\\Users\\ADMIN\\Documents\\Arduino",
+    "arduino.board": "arduino:sam:arduino_due_x",
+    "arduino.port": "COM8",
+    "arduino.enableUSBDetection": true,
+"arduino.disableTestingOpenOCD": false
+}

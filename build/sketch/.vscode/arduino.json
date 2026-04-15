@@ -1,0 +1,7 @@
+#line 1 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\.vscode\\arduino.json"
+{
+    "port": "COM19",
+    "board": "arduino:sam:arduino_due_x_dbg",
+    "sketch": "linerescue.ino",
+    "output": "./build"
+}
