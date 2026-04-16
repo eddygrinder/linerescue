@@ -52,6 +52,8 @@
 #define VEL_VIRA   80u
 #define TICKS_25MM  ((uint32_t)(25.0f / (PI * DIAM_RODA) * TICKS_REV))  // ≈ 198
 #define TICKS_11MM  87 // 11mm é a distância do centro do robô à borda da roda, então 22mm é o diâmetro do círculo que a roda percorre ao pivotar
+#define TICKS_CENTRO  218  // QTR parado na linha → avança até centro ficar sobre interseção
+
 
 // Limiares VEML6040 — calibrados empiricamente
 //                        Medido    Com margem

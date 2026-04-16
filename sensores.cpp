@@ -99,3 +99,7 @@ bool intersecaoDetectada() {
         if (sensorValues[i] > LIMIAR_PRETO) pretos++;
     return pretos >= 4;  // metade ou mais
 }
+
+bool entroncamentoEsq() {
+        return sensorValues[6] > LIMIAR_PRETO  && sensorValues[7] > LIMIAR_PRETO;
+}

@@ -81,28 +81,33 @@ void loop()
   switch (estado)
   {
   case SEGUIR_LINHA:
-  /*  if (esqPreto() || dtoPreto())
+    if (entroncamentoEsq())
     {
-      estado = ATRAVESSAR;
+      estado = ENTR_ESQ;
     }
-    else if (verdeDecisaoCompleta())
-    {
-      if (verdeDuploDetectado())
+
+    /*  if (esqPreto() || dtoPreto())
       {
-        ignorarVerdePor(500);
-        estado = INVERSAO;
+        estado = ATRAVESSAR;
       }
-      else if (verdeESQDetectado())
+      else if (verdeDecisaoCompleta())
       {
-        ignorarVerdePor(100);
-        estado = ENTR_ESQ;
-      }
-      else if (verdeDTODetectado())
-      {
-        ignorarVerdePor(100);
-        estado = ENTR_DTO;
-      }
-    }*/
+        if (verdeDuploDetectado())
+        {
+          ignorarVerdePor(500);
+          estado = INVERSAO;
+        }
+        else if (verdeESQDetectado())
+        {
+          ignorarVerdePor(100);
+          estado = ENTR_ESQ;
+        }
+        else if (verdeDTODetectado())
+        {
+          ignorarVerdePor(100);
+          estado = ENTR_DTO;
+        }
+      }*/
     seguirLinha(erro);
     break;
   case ATRAVESSAR:
@@ -115,27 +120,34 @@ void loop()
     break;
   case ENTR_ESQ:
     resetEncoders();
+    pararMotores();
+    delay(200);
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (ticksMedio() < 87)
+    while (ticksMedio() < TICKS_CENTRO)
     {
     }
     pararMotores();
     delay(200);
     virarEsquerda90();
-    ignorarVerdePor(2000);
     estado = SEGUIR_LINHA;
     break;
 
   case ENTR_DTO:
     resetEncoders();
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (ticksMedio() < 87)
+    while (ticksMedio() < TICKS_CENTRO)
+    {
+    }
+    resetEncoders();
+    pararMotores();
+    delay(200);
+    setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+    while (ticksMedio() < TICKS_CENTRO)
     {
     }
     pararMotores();
     delay(200);
     virarDireita90();
-    ignorarVerdePor(2000);
     estado = SEGUIR_LINHA;
     break;
 
