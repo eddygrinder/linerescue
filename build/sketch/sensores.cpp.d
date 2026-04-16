@@ -1,9 +1,9 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.cpp.o: \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.cpp \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.h \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.cpp.o: \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.cpp \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.h \
  C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors/QTRSensors.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Arduino.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/pgmspace.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/interrupt.h \

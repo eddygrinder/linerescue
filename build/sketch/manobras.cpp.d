@@ -1,6 +1,6 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp.o: \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.h \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp.o: \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Arduino.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/pgmspace.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/interrupt.h \
@@ -136,6 +136,6 @@ c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBAPI.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h

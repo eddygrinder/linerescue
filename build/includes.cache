@@ -7,9 +7,9 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -50,7 +50,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
         "-o",
         "nul"
       ]
@@ -64,9 +64,9 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -108,227 +108,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
         "-o",
         "nul"
       ]
@@ -342,9 +122,9 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -387,7 +167,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
         "-o",
         "nul"
       ]
@@ -398,9 +178,9 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -443,7 +223,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp",
         "-o",
         "nul"
       ]
@@ -454,9 +234,9 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -499,7 +279,231 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp",
+        "-o",
+        "nul"
+      ]
+    }
+  },
+  {
+    "missing_include_h": ""
+  },
+  {
+    "compile": {
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp.d"
+    },
+    "compile_task": {
+      "args": [
+        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
+        "-c",
+        "-g",
+        "-Os",
+        "-w",
+        "-std=gnu++11",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-nostdlib",
+        "-fno-threadsafe-statics",
+        "--param",
+        "max-inline-insns-single=500",
+        "-fno-rtti",
+        "-fno-exceptions",
+        "-w",
+        "-x",
+        "c++",
+        "-E",
+        "-CC",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-DF_CPU=84000000L",
+        "-DARDUINO=10607",
+        "-DARDUINO_SAM_DUE",
+        "-DARDUINO_ARCH_SAM",
+        "-D__SAM3X8E__",
+        "-mthumb",
+        "-DUSB_VID=0x2341",
+        "-DUSB_PID=0x003e",
+        "-DUSBCON",
+        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
+        "-DUSB_PRODUCT=\"Arduino Due\"",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp",
+        "-o",
+        "nul"
+      ]
+    }
+  },
+  {
+    "missing_include_h": ""
+  },
+  {
+    "compile": {
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp.d"
+    },
+    "compile_task": {
+      "args": [
+        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
+        "-c",
+        "-g",
+        "-Os",
+        "-w",
+        "-std=gnu++11",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-nostdlib",
+        "-fno-threadsafe-statics",
+        "--param",
+        "max-inline-insns-single=500",
+        "-fno-rtti",
+        "-fno-exceptions",
+        "-w",
+        "-x",
+        "c++",
+        "-E",
+        "-CC",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-DF_CPU=84000000L",
+        "-DARDUINO=10607",
+        "-DARDUINO_SAM_DUE",
+        "-DARDUINO_ARCH_SAM",
+        "-D__SAM3X8E__",
+        "-mthumb",
+        "-DUSB_VID=0x2341",
+        "-DUSB_PID=0x003e",
+        "-DUSBCON",
+        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
+        "-DUSB_PRODUCT=\"Arduino Due\"",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
+        "-o",
+        "nul"
+      ]
+    }
+  },
+  {
+    "missing_include_h": ""
+  },
+  {
+    "compile": {
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp.d"
+    },
+    "compile_task": {
+      "args": [
+        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
+        "-c",
+        "-g",
+        "-Os",
+        "-w",
+        "-std=gnu++11",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-nostdlib",
+        "-fno-threadsafe-statics",
+        "--param",
+        "max-inline-insns-single=500",
+        "-fno-rtti",
+        "-fno-exceptions",
+        "-w",
+        "-x",
+        "c++",
+        "-E",
+        "-CC",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-DF_CPU=84000000L",
+        "-DARDUINO=10607",
+        "-DARDUINO_SAM_DUE",
+        "-DARDUINO_ARCH_SAM",
+        "-D__SAM3X8E__",
+        "-mthumb",
+        "-DUSB_VID=0x2341",
+        "-DUSB_PID=0x003e",
+        "-DUSBCON",
+        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
+        "-DUSB_PRODUCT=\"Arduino Due\"",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp",
+        "-o",
+        "nul"
+      ]
+    }
+  },
+  {
+    "missing_include_h": ""
+  },
+  {
+    "compile": {
+      "source_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp.d"
+    },
+    "compile_task": {
+      "args": [
+        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
+        "-c",
+        "-g",
+        "-Os",
+        "-w",
+        "-std=gnu++11",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-nostdlib",
+        "-fno-threadsafe-statics",
+        "--param",
+        "max-inline-insns-single=500",
+        "-fno-rtti",
+        "-fno-exceptions",
+        "-w",
+        "-x",
+        "c++",
+        "-E",
+        "-CC",
+        "-mcpu=cortex-m3",
+        "-mthumb",
+        "-DF_CPU=84000000L",
+        "-DARDUINO=10607",
+        "-DARDUINO_SAM_DUE",
+        "-DARDUINO_ARCH_SAM",
+        "-D__SAM3X8E__",
+        "-mthumb",
+        "-DUSB_VID=0x2341",
+        "-DUSB_PID=0x003e",
+        "-DUSBCON",
+        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
+        "-DUSB_PRODUCT=\"Arduino Due\"",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
+        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
+        "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp",
         "-o",
         "nul"
       ]
@@ -511,8 +515,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors\\QTRSensors.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\QTRSensors\\QTRSensors.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\QTRSensors\\QTRSensors.cpp.d"
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\QTRSensors\\QTRSensors.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\QTRSensors\\QTRSensors.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -567,8 +571,8 @@
   {
     "compile": {
       "source_path": "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src\\Wire.cpp",
-      "object_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Wire\\Wire.cpp.o",
-      "depfile_path": "c:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Wire\\Wire.cpp.d"
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Wire\\Wire.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Wire\\Wire.cpp.d"
     },
     "compile_task": {
       "args": [

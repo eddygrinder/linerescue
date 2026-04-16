@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\core\UARTClass.cpp.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\core\UARTClass.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\UARTClass.cpp \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\UARTClass.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\HardwareSerial.h \

@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\libraries\QTRSensors\QTRSensors.cpp.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\libraries\QTRSensors\QTRSensors.cpp.o: \
  C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors\QTRSensors.cpp \
  C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors\QTRSensors.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Arduino.h \

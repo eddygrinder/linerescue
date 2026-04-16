@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\core\wiring_analog.c.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\core\wiring_analog.c.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\wiring_analog.c \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\Arduino.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/pgmspace.h \

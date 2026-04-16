@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\core\USARTClass.cpp.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\core\USARTClass.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\USARTClass.cpp \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\USARTClass.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\UARTClass.h \

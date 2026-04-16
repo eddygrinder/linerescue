@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\core\syscalls_sam3.c.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\core\syscalls_sam3.c.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\syscalls_sam3.c \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\syscalls.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam.h \

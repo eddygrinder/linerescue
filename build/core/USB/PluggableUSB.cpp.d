@@ -1,4 +1,4 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\core\USB\PluggableUSB.cpp.o: \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\core\USB\PluggableUSB.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\USB\PluggableUSB.cpp \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino\USB\USBAPI.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \

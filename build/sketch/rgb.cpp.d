@@ -1,6 +1,6 @@
-c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.cpp.o: \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.cpp \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.h \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.cpp.o: \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.cpp \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src/Wire.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../chip.h \
@@ -139,4 +139,4 @@ c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USARTClass.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/UARTClass.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/syscalls.h \
- c:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h

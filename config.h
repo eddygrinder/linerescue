@@ -2,7 +2,7 @@
 
 // ─── PID ────────────────────────────────────────────────────────
 #define VEL_BASE     30
-#define KP           0.05f
+#define KP           0.065f
 #define KD           0.0f
 
 // ─── QTR ────────────────────────────────────────────────────────
@@ -55,7 +55,8 @@
 
 // Limiares VEML6040 — calibrados empiricamente
 //                        Medido    Com margem
-#define LIMIAR_BRANCO_MAX  1800   // 2940 → divide por ~1.6, zona segura abaixo do branco
-#define LIMIAR_PRETO_MIN    750   // 625  → ligeiramente acima do preto
-#define LIMIAR_PRETO_MAX    800
-#define LIMIAR_RATIO_VERDE  0.48f // 0.50 → margem face ao branco (0.43)
+// Limiares VEML6040 — calibrados empiricamente
+#define LIMIAR_BRANCO_MAX   2000   // W máximo para não ser branco
+#define LIMIAR_PRETO_MAX     950   // W máximo para ser preto
+#define LIMIAR_RATIO_VERDE  0.44f  // G/(R+G+B) mínimo para ser verde
+

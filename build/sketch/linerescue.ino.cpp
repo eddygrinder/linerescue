@@ -18,7 +18,8 @@ enum Estado
   ENTR_ESQ,     // reservado — sensores da esquerda veem linha e os da direita não
   ENTR_DTO,     // reservado — sensores da direita veem linha e os da esquerda não
   CRUZAMENTO,   // reservado — QTR padrão
-  INVERSAO,     // reservado — ambos sensores veem verde
+  INVERSAO,     // reservado — ambos sensores veem verde,
+  ATRAVESSAR,   // reservado — atravessa a linha às cegas até sair do preto
   PARAR
 };
 
@@ -26,11 +27,11 @@ Estado estado = CALIBRAR;
 bool verdeRecente = false;
 
 // ─── SETUP ───────────────────────────────────────────────────────
-#line 27 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 28 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup();
-#line 67 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 68 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void loop();
-#line 27 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 28 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup()
 {
   Serial.begin(115200);
@@ -75,8 +76,7 @@ void loop()
 {
   qtr.read(sensorValues);
   bool linha = linhaDetectada();
-
-  atualizarVerde(); // ← sempre, sem condição
+  rgbUpdate();
 
   uint16_t posicao = 3500;
   int erro = 0;
@@ -88,31 +88,38 @@ void loop()
   switch (estado)
   {
   case SEGUIR_LINHA:
-    if (esqPreto() || dtoPreto())
+  /*  if (esqPreto() || dtoPreto())
     {
-      ignorarVerdePor(2000); // entroncamento → segue em frente
+      estado = ATRAVESSAR;
     }
     else if (verdeDecisaoCompleta())
     {
       if (verdeDuploDetectado())
       {
-        ignorarVerdePor(2000);
+        ignorarVerdePor(500);
         estado = INVERSAO;
       }
       else if (verdeESQDetectado())
       {
-        ignorarVerdePor(2000);
+        ignorarVerdePor(100);
         estado = ENTR_ESQ;
       }
       else if (verdeDTODetectado())
       {
-        ignorarVerdePor(2000);
+        ignorarVerdePor(100);
         estado = ENTR_DTO;
       }
-    }
+    }*/
     seguirLinha(erro);
     break;
-
+  case ATRAVESSAR:
+    setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+    if (esqBranco() && dtoBranco())
+    {
+      resetarVerde(); // ← limpa qualquer verde acumulado durante o ATRAVESSAR
+      estado = SEGUIR_LINHA;
+    }
+    break;
   case ENTR_ESQ:
     resetEncoders();
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
