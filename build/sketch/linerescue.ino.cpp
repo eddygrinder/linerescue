@@ -97,13 +97,32 @@ void loop()
   switch (estado)
   {
   case SEGUIR_LINHA:
-    Serial.print("S6=");
-    Serial.print(sensorValues[6]);
-    Serial.print(" S7=");
-    Serial.println(sensorValues[7]);
     if (!linha)
     {
-      estado = PARAR;
+      static unsigned long tSemLinha = 0;
+      if (tSemLinha == 0)
+        tSemLinha = millis(); // marca quando perdeu a linha
+
+      if (millis() - tSemLinha > 2000)
+      { // 2s sem linha → para
+        estado = PARAR;
+        tSemLinha = 0;
+        break;
+      }
+      // menos de 2s → anda em frente
+      setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+      tSemLinha = 0; // tem linha → reset do timer
+      if (entroncamentoEsq())
+      {
+        estado = ENTR_ESQ;
+        break;
+      }
+      if (entroncamentoDir())
+      {
+        estado = ENTR_DTO;
+        break;
+      }
+      seguirLinha(erro);
       break;
     }
     if (entroncamentoEsq())
