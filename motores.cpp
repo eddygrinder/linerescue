@@ -32,20 +32,3 @@ void setAllMotors(int fl, int fr, int rl, int rr) {
 void pararMotores() {
   setAllMotors(0, 0, 0, 0);
 }
-
-void spinEsquerda(int vel) {
-  // FL+RL avançam, FR+RR recuam
-  setAllMotors(-vel, vel, -vel, vel);
-}
-
-void lateralEsquerda(int vel) {
-  // FL+RL avançam, FR+RR recuam
-  // FL, FR, RL, RR
-  setAllMotors(vel, -vel, -vel, vel);
-}
-
-void lateraldireita(int vel) {
-  // FL+RL avançam, FR+RR recuam
-  // FL, FR, RL, RR
-  setAllMotors(-vel, vel, vel, -vel);
-}

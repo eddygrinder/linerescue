@@ -18,11 +18,14 @@ enum Estado
   CRUZAMENTO,   // reservado — QTR padrão
   INVERSAO,     // reservado — ambos sensores veem verde,
   ATRAVESSAR,   // reservado — atravessa a linha às cegas até sair do preto
-  PARAR
+  PARAR,
+  VERIFICAR_INTERSECAO, // reservado — entroncamento detectado, verificar se tem cor e decidir o que fazer
 };
 
 Estado estado = CALIBRAR;
 bool verdeRecente = false;
+bool ultimoPretoEsq = false; // para decidir virar para onde no entroncamento
+bool ultimoPretoDto = false; // para decidir virar para onde no entroncamento
 
 // ─── SETUP ───────────────────────────────────────────────────────
 void setup()
@@ -67,10 +70,15 @@ loop()
 // ─── LOOP ────────────────────────────────────────────────────────
 void loop()
 {
-  qtr.read(sensorValues);
+  qtr.readCalibrated(sensorValues);
   bool linha = linhaDetectada();
-  rgbUpdate();
 
+  static unsigned long tRGB = 0;
+  if (millis() - tRGB > 200)
+  { // lê RGB a cada 50ms
+    rgbUpdate();
+    tRGB = millis();
+  }
   uint16_t posicao = 3500;
   int erro = 0;
   if (linha)
@@ -78,88 +86,53 @@ void loop()
     posicao = qtr.readLineBlack(sensorValues);
     erro = (int)posicao - 3500;
   }
+
   switch (estado)
   {
   case SEGUIR_LINHA:
+    Serial.print("S6=");
+    Serial.print(sensorValues[6]);
+    Serial.print(" S7=");
+    Serial.println(sensorValues[7]);
+    if (!linha)
+    {
+      estado = PARAR;
+      break;
+    }
     if (entroncamentoEsq())
     {
       estado = ENTR_ESQ;
     }
-
-    /*  if (esqPreto() || dtoPreto())
-      {
-        estado = ATRAVESSAR;
-      }
-      else if (verdeDecisaoCompleta())
-      {
-        if (verdeDuploDetectado())
-        {
-          ignorarVerdePor(500);
-          estado = INVERSAO;
-        }
-        else if (verdeESQDetectado())
-        {
-          ignorarVerdePor(100);
-          estado = ENTR_ESQ;
-        }
-        else if (verdeDTODetectado())
-        {
-          ignorarVerdePor(100);
-          estado = ENTR_DTO;
-        }
-      }*/
-    seguirLinha(erro);
-    break;
-  case ATRAVESSAR:
-    setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    if (esqBranco() && dtoBranco())
+    if (entroncamentoDir())
     {
-      resetarVerde(); // ← limpa qualquer verde acumulado durante o ATRAVESSAR
-      estado = SEGUIR_LINHA;
+      estado = ENTR_DTO;
     }
+    seguirLinha(erro);
     break;
   case ENTR_ESQ:
     resetEncoders();
-    pararMotores();
-    delay(200);
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
     while (ticksMedio() < TICKS_CENTRO)
     {
     }
     pararMotores();
-    delay(200);
+    delay(WAIT_VIRA_MS);
     virarEsquerda90();
+    ignorarVerdePor(500);
     estado = SEGUIR_LINHA;
     break;
-
   case ENTR_DTO:
     resetEncoders();
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
     while (ticksMedio() < TICKS_CENTRO)
     {
     }
-    resetEncoders();
     pararMotores();
-    delay(200);
-    setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (ticksMedio() < TICKS_CENTRO)
-    {
-    }
-    pararMotores();
-    delay(200);
+    delay(WAIT_VIRA_MS);
     virarDireita90();
+    ignorarVerdePor(500);
     estado = SEGUIR_LINHA;
     break;
-
-  case INVERSAO:
-    pararMotores();
-    delay(200);
-    fazer180();
-    pararMotores();
-    ignorarVerdePor(1000);
-    estado = SEGUIR_LINHA;
-    break;
-
   case PARAR:
     pararMotores();
     break;

@@ -6,6 +6,8 @@
 // ── estado interno ────────────────────────────────────────
 static uint8_t _corEsq = COR_BRANCO;
 static uint8_t _corDto = COR_BRANCO;
+static uint8_t anteriorEsq = COR_BRANCO;
+static uint8_t anteriorDto = COR_BRANCO;
 
 static bool vistoPorEsq = false;
 static bool vistoPorDto = false;
@@ -28,7 +30,10 @@ static void configurarSensor(TwoWire &bus)
 void rgbSetup()
 {
     Wire.begin();
+    Wire.setClock(400000); // 400kHz em vez de 100kHz
+
     Wire1.begin();
+    Wire1.setClock(400000); // 400kHz em vez de 100kHz
     configurarSensor(Wire);
     configurarSensor(Wire1);
     delay(100);
@@ -61,15 +66,14 @@ static RGBW lerSensor(TwoWire &bus)
 static bool isGreen(uint16_t r, uint16_t g, uint16_t b, uint16_t w)
 {
     if (w > LIMIAR_BRANCO_MAX)
-        return false;
-    if (w < LIMIAR_PRETO_MAX)
-        return false;
+        return false; // elimina branco pelo W
     uint16_t total = r + g + b;
     if (total == 0)
         return false;
-    return ((float)g / total) > LIMIAR_RATIO_VERDE;
+    bool gAbsoluto = (g > 450 && g < 700);                 // G no intervalo do verde
+    bool gRatio = ((float)g / total) > LIMIAR_RATIO_VERDE; // rácio > 0.48
+    return gAbsoluto && gRatio;                            // ambos têm de ser verdade
 }
-
 static bool isBlack(uint16_t w)
 {
     return w < LIMIAR_PRETO_MAX;
@@ -78,16 +82,21 @@ static bool isBlack(uint16_t w)
 // ── atualização principal — chamar no topo do loop ────────
 void rgbUpdate()
 {
-    RGBW esq = lerSensor(Wire);
-    RGBW dto = lerSensor(Wire1);
+    // só lê canal G — 2 leituras em vez de 8
+    uint16_t g_esq = readVEML(Wire, 0x09);
+    uint16_t g_dto = readVEML(Wire1, 0x09);
 
-    // determina cor atual
-    _corEsq = isGreen(esq.r, esq.g, esq.b, esq.w) ? COR_VERDE : isBlack(esq.w) ? COR_PRETO
-                                                                               : COR_BRANCO;
-    _corDto = isGreen(dto.r, dto.g, dto.b, dto.w) ? COR_VERDE : isBlack(dto.w) ? COR_PRETO
-                                                                               : COR_BRANCO;
+    uint8_t novaCorEsq = (g_esq > 450 && g_esq < 700) ? COR_VERDE : COR_BRANCO;
+    uint8_t novaCorDto = (g_dto > 450 && g_dto < 700) ? COR_VERDE : COR_BRANCO;
 
-    // acumula flags de verde (só se não estiver em período de ignore)
+    // guarda anterior
+    anteriorEsq = _corEsq;
+    anteriorDto = _corDto;
+
+    _corEsq = novaCorEsq;
+    _corDto = novaCorDto;
+
+    // acumula flags de verde
     if (millis() < ignorarVerdeAte)
     {
         resetarVerde();
@@ -123,6 +132,10 @@ bool dtoPreto() { return _corDto == COR_PRETO; }
 // ── deteção de verde ──────────────────────────────────────
 bool verdeDecisaoCompleta()
 {
+    Serial.print("ESQ=");
+    Serial.print(vistoPorEsq);
+    Serial.print(" DTO=");
+    Serial.println(vistoPorDto);
     if (!janelaAtiva)
         return false;
     return (vistoPorEsq && vistoPorDto) || (millis() - tsInicio > JANELA_VERDE_MS);
@@ -148,3 +161,9 @@ void ignorarVerdePor(unsigned long ms)
     resetarVerde();
     ignorarVerdeAte = millis() + ms;
 }
+
+bool esqVerde() { return _corEsq == COR_VERDE; }
+bool dtoVerde() { return _corDto == COR_VERDE; }
+
+bool esqVerdeValido() { return _corEsq == COR_VERDE && anteriorEsq == COR_BRANCO; }
+bool dtoVerdeValido() { return _corDto == COR_VERDE && anteriorDto == COR_BRANCO; }

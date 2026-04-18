@@ -15,3 +15,4 @@ bool sensorEVerde(int idx);     // true se o sensor idx vê verde
 bool verdeEsquerda();       // true se o sensor mais à esquerda vê verde
 bool verdeDireita();        // true se o sensor mais à direita vê verde
 bool entroncamentoEsq();       // true se os 4 sensores da esquerda vêem preto (entroncamento à esquerda)    
+bool entroncamentoDir();       // true se os 4 sensores da direita vêem preto (entroncamento à direita)    

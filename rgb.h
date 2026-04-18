@@ -24,12 +24,16 @@ bool esqBranco();
 bool dtoBranco();
 bool esqPreto();
 bool dtoPreto();
+bool esqVerde();
+bool dtoVerde();
 
 // deteção de verde
 bool verdeDecisaoCompleta();
 bool verdeDuploDetectado();
 bool verdeESQDetectado();
 bool verdeDTODetectado();
+bool esqVerdeValido();
+bool dtoVerdeValido();
 
 // controlo
 void resetarVerde();

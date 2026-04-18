@@ -3,7 +3,7 @@
 
 // ─── PID ────────────────────────────────────────────────────────
 #define VEL_BASE     30
-#define KP           0.065f
+#define KP           0.03f
 #define KD           0.0f
 
 // ─── QTR ────────────────────────────────────────────────────────
@@ -50,16 +50,17 @@
 #define TICKS_360  ((uint32_t)(DIST_EIXOS / DIAM_RODA * TICKS_REV))
 #define TICKS_90   (TICKS_360 / 4)
 #define TICKS_180  (TICKS_360 / 2)
-#define VEL_VIRA   80u
+#define VEL_VIRA   45u
 #define TICKS_25MM  ((uint32_t)(25.0f / (PI * DIAM_RODA) * TICKS_REV))  // ≈ 198
 #define TICKS_11MM  87 // 11mm é a distância do centro do robô à borda da roda, então 22mm é o diâmetro do círculo que a roda percorre ao pivotar
 #define TICKS_CENTRO  218  // QTR parado na linha → avança até centro ficar sobre interseção
+#define WAIT_VIRA_MS 500
 
 
 // Limiares VEML6040 — calibrados empiricamente
 //                        Medido    Com margem
 // Limiares VEML6040 — calibrados empiricamente
 #define LIMIAR_BRANCO_MAX   2000   // W máximo para não ser branco
-#define LIMIAR_PRETO_MAX     950   // W máximo para ser preto
-#define LIMIAR_RATIO_VERDE  0.44f  // G/(R+G+B) mínimo para ser verde
+#define LIMIAR_PRETO_MAX     825   // W máximo para ser preto
+#define LIMIAR_RATIO_VERDE  0.48f  // G/(R+G+B) mínimo para ser verde
 

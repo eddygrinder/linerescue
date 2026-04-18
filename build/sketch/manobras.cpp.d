@@ -138,4 +138,6 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
  C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
  C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.h \
+ C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors/QTRSensors.h

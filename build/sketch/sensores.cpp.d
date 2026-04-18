@@ -138,4 +138,5 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBCore.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBAPI.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.h
