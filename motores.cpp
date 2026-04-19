@@ -32,3 +32,10 @@ void setAllMotors(int fl, int fr, int rl, int rr) {
 void pararMotores() {
   setAllMotors(0, 0, 0, 0);
 }
+
+void moverLateral(int lado, int vel) {
+    if (lado == ESQUERDA)
+        setAllMotors(-vel, +vel, +vel, -vel);
+    else
+        setAllMotors(+vel, -vel, -vel, +vel);
+}

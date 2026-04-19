@@ -9,3 +9,4 @@ void pararMotores();
 void spinEsquerda(int vel);
 void lateralEsquerda(int vel);
 void lateraldireita(int vel);
+void moverLateral(int lado, int vel);

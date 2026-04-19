@@ -1,11 +1,8 @@
-C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp.o: \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Arduino.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/pgmspace.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/interrupt.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/binary.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/itoa.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/chip.h \
+C:\Users\ADMIN\Documents\GitHub\linerescue\build\libraries\Wire\Wire.cpp.o: \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src\Wire.cpp \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src\Wire.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../chip.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam3.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam3xa/include/sam3xa.h \
@@ -81,48 +78,50 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam3xa/include/instance/instance_rtc.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam3xa/include/instance/instance_gpbr.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/CMSIS/Device/ATMEL/sam3xa/include/pio/pio_sam3x8e.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/adc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../chip.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/dacc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/interrupt_sam_nvic.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/efc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/gpbr.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/pio.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/pmc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/pwmc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/rstc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/rtc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/rtt.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/spi.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/ssc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/tc.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/usart.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/wdt.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/timetick.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/USB_device.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/USB_host.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/can.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/emac.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/trng.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/uotghs_device.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/uotghs_host.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/adc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/../chip.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/dacc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/interrupt_sam_nvic.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/efc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/gpbr.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/pio.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/pmc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/pwmc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/rstc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/rtc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/rtt.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/spi.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/ssc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/tc.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/twi.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/usart.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/wdt.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/timetick.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/USB_device.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/USB_host.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/can.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/emac.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/trng.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/uotghs_device.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/../include/uotghs_host.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/WString.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/pgmspace.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Printable.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\variants\arduino_due_x/variant.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Arduino.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/avr/interrupt.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/binary.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/itoa.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/chip.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/wiring_constants.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/WCharacter.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/WString.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Tone.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/WMath.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/HardwareSerial.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Printable.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/wiring_pulse.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\variants\arduino_due_x/variant.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/UARTClass.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USARTClass.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/UARTClass.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/syscalls.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/wiring.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/wiring_digital.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/wiring_analog.h \
@@ -134,28 +133,8 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBCore.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBAPI.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors/QTRSensors.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\seguimento.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src/Wire.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\imu.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_LSM303DLHC/Adafruit_LSM303_U.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\vl53.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/Adafruit_VL53L0X.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_api.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_api_strings.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_def.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_device.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_types.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_platform.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_i2c_platform.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_platform_log.h
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/UARTClass.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USARTClass.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/UARTClass.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/syscalls.h

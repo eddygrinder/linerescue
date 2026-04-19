@@ -76,6 +76,7 @@
 #define LIMIAR_PRETO_MAX 900     // W abaixo disto → preto
 #define LIMIAR_RATIO_VERDE 0.48f // G/(R+G+B) mínimo para verde
 #define LIMIAR_PRATA_VEML 4000   // W acima disto → fita prateada (afinar no evento)
+#define LIMIAR_PRATA 5 // valor bruto do QTR abaixo do qual pode ser prata (afinar no evento)
 
 // ─── IMU LSM303 ──────────────────────────────────────────────────
 #define OFFSET_X 0.04f    // aceleração X em repouso (calibrar no robot)
@@ -83,3 +84,10 @@
 
 // ─── OBSTÁCULOS E RAMPAS ─────────────────────────────────────────
 #define VEL_TRANSPOR 50 // velocidade para transpor debris/speedbump
+// ─── VL53L0X ─────────────────────────────────────────────────────
+#define DIST_OBSTACULO  200  // mm — distância de deteção do obstáculo (afinar nos treinos)
+
+#define TICKS_DESVIO_LAT   700   // ~17.5cm lateral
+#define TICKS_DESVIO_FREN  1350  // ~34cm frente
+#define ESQUERDA 0
+#define DIREITA  1
