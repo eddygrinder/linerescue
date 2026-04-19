@@ -124,6 +124,14 @@ bool intersecaoDetectada()
   return pretos >= 4; // metade ou mais
 }
 
+bool todosBrancos()
+{
+  for (int i = 0; i < NUM_SENSORS; i++)
+    if (sensorValues[i] < LIMIAR_PRATA)
+      return true;
+  return false;
+}
+
 bool entroncamentoEsq()
 {
   return sensorValues[6] > LIMIAR_PRETO && sensorValues[7] > LIMIAR_PRETO;

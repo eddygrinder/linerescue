@@ -1,87 +1,85 @@
 #line 1 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\config.h"
 #pragma once
+#include <math.h>
 
-// ─── PID ────────────────────────────────────────────────────────
-#define VEL_BASE     30
-#define KP           0.03f
-#define KD           0.0f
+// ─── PID — seguimento de linha ───────────────────────────────────
+#define VEL_BASE 30 // velocidade base em linha recta
+#define KP 0.03f    // ganho proporcional — afinar empiricamente
+#define KD 0.0f     // ganho derivativo — afinar empiricamente
 
-// PID subida
-#define VEL_SUBIR    60
-#define KP_SUBIR     0.02f  // afinar empiricamente
-#define KD_SUBIR     0.0f
+// ─── PID — subida de rampa ───────────────────────────────────────
+#define VEL_SUBIR 80   // velocidade na subida
+#define KP_SUBIR 0.02f // afinar empiricamente na rampa
+#define KD_SUBIR 0.0f
 
-// PID descida
-#define VEL_DESCER   15
-#define KP_DESCER    0.05f  // mais lento → mais correção necessária
-#define KD_DESCER    0.0f
+// ─── PID — descida de rampa ──────────────────────────────────────
+#define VEL_DESCER 15   // velocidade na descida — devagar para não embalar
+#define KP_DESCER 0.05f // mais lento → mais correção necessária
+#define KD_DESCER 0.0f
 
-// ─── QTR ────────────────────────────────────────────────────────
-#define NUM_SENSORS  8
-#define LIMIAR_PRETO 800
+// ─── QTR ─────────────────────────────────────────────────────────
+#define NUM_SENSORS 8
+#define LIMIAR_PRETO 800         // valor calibrado (0-1000) acima do qual é preto
+#define LIMIAR_PRETO_CENTRAL 600 // limiar mais permissivo para sensores centrais
 
 // ─── PINOS MOTORES ───────────────────────────────────────────────
 #define FL_PWM1 5
 #define FL_PWM2 4
-#define FL_EN   48
-#define FL_ENB  46
+#define FL_EN 48
+#define FL_ENB 46
 
 #define FR_PWM1 6
 #define FR_PWM2 7
-#define FR_EN   50
-#define FR_ENB  52
+#define FR_EN 50
+#define FR_ENB 52
 
 #define RL_PWM1 10
 #define RL_PWM2 11
-#define RL_EN   25
-#define RL_ENB  23
+#define RL_EN 25
+#define RL_ENB 23
 
 #define RR_PWM1 2
 #define RR_PWM2 3
-#define RR_EN   44
-#define RR_ENB  42
+#define RR_EN 44
+#define RR_ENB 42
 
-// ── Encoders ─────────────────────────────────────────
-#define PIN_C1_FL  24
-#define PIN_C2_FL  26
-#define PIN_C1_FR  14
-#define PIN_C2_FR  15
-#define PIN_C1_TL   8
-#define PIN_C2_TL   9
-#define PIN_C1_TR  13
-#define PIN_C2_TR  12
+// ─── PINOS ENCODERS ──────────────────────────────────────────────
+#define PIN_C1_FL 24
+#define PIN_C2_FL 26
+#define PIN_C1_FR 14
+#define PIN_C2_FR 15
+#define PIN_C1_TL 8
+#define PIN_C2_TL 9
+#define PIN_C1_TR 13
+#define PIN_C2_TR 12
 
-// ─── SISTEMA ─────────────────────────────────────────────────────
-#define TICKS_REV        1440u  // 12 CPR × 30 (caixa) × 4 (quadratura)
-#define DIAM_RODA        58.0f  // mm
-#define DIST_EIXOS      110.0f  // mm (esquerda–direita)
+// ─── GEOMETRIA ───────────────────────────────────────────────────
+#define TICKS_REV 1440u   // 12 CPR × 30 (caixa) × 4 (quadratura)
+#define DIAM_RODA 58.0f   // mm
+#define DIST_EIXOS 110.0f // mm (esquerda–direita)
 
 // ─── MANOBRAS ────────────────────────────────────────────────────
-#define TICKS_360  ((uint32_t)(DIST_EIXOS / DIAM_RODA * TICKS_REV))
-#define TICKS_90   (TICKS_360 / 4)
-#define TICKS_180  (TICKS_360 / 2)
-#define VEL_VIRA   45u
-#define TICKS_25MM  ((uint32_t)(25.0f / (PI * DIAM_RODA) * TICKS_REV))  // ≈ 198
-#define TICKS_11MM  87 // 11mm é a distância do centro do robô à borda da roda, então 22mm é o diâmetro do círculo que a roda percorre ao pivotar
-#define TICKS_CENTRO  210  // QTR parado na linha → avança até centro ficar sobre interseção
-#define TICKS_VERDE_PARA_LINHA  158  // QTR sobre verde → centro sobre linha preta
-#define WAIT_VIRA_MS 500
+#define TICKS_360 ((uint32_t)(DIST_EIXOS / DIAM_RODA * TICKS_REV))
+#define TICKS_90 (TICKS_360 / 4)
+#define TICKS_180 (TICKS_360 / 2)
+#define VEL_VIRA 45u // velocidade de rotação nas viragens
 
+// distâncias em ticks
+#define TICKS_25MM ((uint32_t)(25.0f / (PI * DIAM_RODA) * TICKS_REV)) // ≈ 198
+#define TICKS_CENTRO 210                                              // QTR sobre linha → centro do robot sobre interseção
+#define TICKS_VERDE_PARA_LINHA 158                                    // QTR sobre verde → centro sobre linha preta
 
-// Limiares VEML6040 — calibrados empiricamente
-//                        Medido    Com margem
-// Limiares VEML6040 — calibrados empiricamente
-#define LIMIAR_BRANCO_MAX   2000   // W máximo para não ser branco
-#define LIMIAR_PRETO_MAX     900   // W máximo para ser preto
-#define LIMIAR_RATIO_VERDE  0.48f  // G/(R+G+B) mínimo para ser verde
+#define WAIT_VIRA_MS 500 // pausa antes de iniciar viragem (ms)
 
-// IMU
-#define LIMIAR_RAMPA  1.5f  // m/s² — entre 0.08 (plano) e 1.80 (rampa)
-#define OFFSET_X      0.04f  // valor em repouso
-#define LIMIAR_DEBRIS 0.5f   // acima disto já não é plano
+// ─── VEML6040 ────────────────────────────────────────────────────
+#define LIMIAR_BRANCO_MAX 2000   // W acima disto → branco
+#define LIMIAR_PRETO_MAX 900     // W abaixo disto → preto
+#define LIMIAR_RATIO_VERDE 0.48f // G/(R+G+B) mínimo para verde
+#define LIMIAR_PRATA_VEML 4000   // W acima disto → fita prateada (afinar no evento)
 
+// ─── IMU LSM303 ──────────────────────────────────────────────────
+#define OFFSET_X 0.04f    // aceleração X em repouso (calibrar no robot)
+#define LIMIAR_RAMPA 1.5f // variação X acima disto → rampa (plano~0, rampa~3.35)
 
-// Rampas e obstáculos
-#define VEL_TRANSPOR  50  // debris 3mm
-#define VEL_SUBIR     80  // rampa — mais velocidade para subir
-#define VEL_DESCER    15  // descida rampa — devagar
+// ─── OBSTÁCULOS E RAMPAS ─────────────────────────────────────────
+#define VEL_TRANSPOR 50 // velocidade para transpor debris/speedbump

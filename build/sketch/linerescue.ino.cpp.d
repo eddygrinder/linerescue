@@ -135,17 +135,7 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/USB/USBAPI.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/RingBuffer.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Stream.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\motores.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\sensores.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\QTRSensors/QTRSensors.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\seguimento.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\encoders.h \
  C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\rgb.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src/Wire.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
- C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\imu.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_LSM303DLHC/Adafruit_LSM303_U.h
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\config.h
