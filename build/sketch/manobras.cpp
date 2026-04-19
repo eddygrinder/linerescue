@@ -20,7 +20,6 @@ void virarEsquerda90()
             break;
     }
     pararMotores();
-    delay(1000);
     alinharNaLinha();
 }
 
@@ -37,7 +36,6 @@ void virarDireita90()
             break;
     }
     pararMotores();
-    delay(1000);
     //alinharNaLinha();
 }
 

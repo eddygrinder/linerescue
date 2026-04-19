@@ -15,7 +15,7 @@ static bool janelaAtiva = false;
 static unsigned long tsInicio = 0;
 static unsigned long ignorarVerdeAte = 0;
 
-#define JANELA_VERDE_MS 1000
+#define JANELA_VERDE_MS 300
 
 // ── configuração ──────────────────────────────────────────
 static void configurarSensor(TwoWire &bus)
@@ -50,16 +50,6 @@ static uint16_t readVEML(TwoWire &bus, uint8_t reg)
         return (high << 8) | low;
     }
     return 0;
-}
-
-static RGBW lerSensor(TwoWire &bus)
-{
-    RGBW val;
-    val.r = readVEML(bus, 0x08);
-    val.g = readVEML(bus, 0x09);
-    val.b = readVEML(bus, 0x0A);
-    val.w = readVEML(bus, 0x0B);
-    return val;
 }
 
 // ── interpretação ─────────────────────────────────────────
@@ -126,16 +116,10 @@ void rgbUpdate()
 // ── estado atual dos sensores ─────────────────────────────
 bool esqBranco() { return _corEsq == COR_BRANCO; }
 bool dtoBranco() { return _corDto == COR_BRANCO; }
-bool esqPreto() { return _corEsq == COR_PRETO; }
-bool dtoPreto() { return _corDto == COR_PRETO; }
 
 // ── deteção de verde ──────────────────────────────────────
 bool verdeDecisaoCompleta()
 {
-    Serial.print("ESQ=");
-    Serial.print(vistoPorEsq);
-    Serial.print(" DTO=");
-    Serial.println(vistoPorDto);
     if (!janelaAtiva)
         return false;
     return (vistoPorEsq && vistoPorDto) || (millis() - tsInicio > JANELA_VERDE_MS);

@@ -6,6 +6,7 @@
 #include "manobras.h"
 #include "encoders.h"
 #include "rgb.h"
+#include "imu.h"
 
 // ─── ESTADOS ─────────────────────────────────────────────────────
 enum Estado
@@ -22,6 +23,7 @@ enum Estado
   ATRAVESSAR,   // reservado — atravessa a linha às cegas até sair do preto
   PARAR,
   VERIFICAR_INTERSECAO, // reservado — entroncamento detectado, verificar se tem cor e decidir o que fazer
+  VERIFICAR_CURVA
 };
 
 Estado estado = CALIBRAR;
@@ -30,11 +32,11 @@ bool ultimoPretoEsq = false; // para decidir virar para onde no entroncamento
 bool ultimoPretoDto = false; // para decidir virar para onde no entroncamento
 
 // ─── SETUP ───────────────────────────────────────────────────────
-#line 31 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 33 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup();
-#line 71 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 74 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void loop();
-#line 31 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 33 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup()
 {
   Serial.begin(115200);
@@ -42,6 +44,7 @@ void setup()
   encoders_init();
   sensoresSetup();
   rgbSetup();
+  imuSetup();
   delay(500);
 
   calibrarQTR();
@@ -81,13 +84,31 @@ void loop()
   bool linha = linhaDetectada();
 
   static unsigned long tRGB = 0;
+  static unsigned long tSemLinha = 0;
+  static unsigned long tBloqueio = 0;
+  static uint32_t ticksAntes = 0;
+  uint16_t posicao = 3500;
+  int erro = 0;
+
   if (millis() - tRGB > 200)
   { // lê RGB a cada 50ms
     rgbUpdate();
     tRGB = millis();
   }
-  uint16_t posicao = 3500;
-  int erro = 0;
+
+  if (millis() - tBloqueio > 1000)
+  {
+    if (linha && (ticksMedio() - ticksAntes) < 3)
+    {
+      setAllMotors(VEL_TRANSPOR, VEL_TRANSPOR, VEL_TRANSPOR, VEL_TRANSPOR);
+      delay(500);
+      if (naRampa())
+        estado = SUBIR_RAMPA;
+    }
+    ticksAntes = ticksMedio(); // ← só aqui
+    tBloqueio = millis();
+  }
+
   if (linha)
   {
     posicao = qtr.readLineBlack(sensorValues);
@@ -99,46 +120,99 @@ void loop()
   case SEGUIR_LINHA:
     if (!linha)
     {
-      static unsigned long tSemLinha = 0;
       if (tSemLinha == 0)
-        tSemLinha = millis(); // marca quando perdeu a linha
-
+        tSemLinha = millis();
       if (millis() - tSemLinha > 2000)
-      { // 2s sem linha → para
+      {
         estado = PARAR;
         tSemLinha = 0;
         break;
       }
-      // menos de 2s → anda em frente
       setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-      tSemLinha = 0; // tem linha → reset do timer
-      if (entroncamentoEsq())
+      break;
+    }
+    tSemLinha = 0;
+
+    // 1. verde primeiro
+    if (verdeDecisaoCompleta())
+    {
+      if (verdeDuploDetectado())
       {
+        tBloqueio = millis();      // ← adiciona
+        ticksAntes = ticksMedio(); // ← adiciona
+        fazer180();
+        ignorarVerdePor(1000);
+        estado = SEGUIR_LINHA;
+        break;
+      }
+      else if (verdeESQDetectado())
+      {
+        pararMotores();
         estado = ENTR_ESQ;
         break;
       }
-      if (entroncamentoDir())
+      else if (verdeDTODetectado())
       {
+        pararMotores();
         estado = ENTR_DTO;
         break;
       }
-      seguirLinha(erro);
-      break;
     }
+    // 2. entroncamento QTR
     if (entroncamentoEsq())
     {
-      estado = ENTR_ESQ;
+      ultimoPretoEsq = true;
+      resetEncoders();
+      // antes de qualquer manobra
+      tBloqueio = millis();
+      ticksAntes = ticksMedio();
+      setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+      while (ticksMedio() < TICKS_CENTRO)
+      {
+      }
+      pararMotores();
+      estado = VERIFICAR_INTERSECAO;
+      break;
     }
     if (entroncamentoDir())
     {
-      estado = ENTR_DTO;
+      ultimoPretoEsq = false;
+      resetEncoders();
+      // antes de qualquer manobra
+      tBloqueio = millis();
+      ticksAntes = ticksMedio();
+      setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+      while (ticksMedio() < TICKS_CENTRO)
+      {
+      }
+      estado = VERIFICAR_INTERSECAO;
+      break;
     }
+    // 3. PID
     seguirLinha(erro);
+    break;
+  case VERIFICAR_INTERSECAO:
+    if (curvaOuEntroncamento())
+    {
+      pararMotores();
+      delay(WAIT_VIRA_MS);
+      tBloqueio = millis();      // ← adiciona
+      ticksAntes = ticksMedio(); // ← adiciona
+      if (ultimoPretoEsq)
+        virarEsquerda90();
+      else
+        virarDireita90();
+    }
+    estado = SEGUIR_LINHA;
+    // seguirLinha(erro);
     break;
   case ENTR_ESQ:
     resetEncoders();
+    // antes de qualquer manobra
+    tBloqueio = millis();
+    ticksAntes = ticksMedio();
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (ticksMedio() < TICKS_CENTRO)
+    while (ticksMedio() < TICKS_VERDE_PARA_LINHA)
     {
     }
     pararMotores();
@@ -149,8 +223,11 @@ void loop()
     break;
   case ENTR_DTO:
     resetEncoders();
+    // antes de qualquer manobra
+    tBloqueio = millis();
+    ticksAntes = ticksMedio();
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (ticksMedio() < TICKS_CENTRO)
+    while (ticksMedio() < TICKS_VERDE_PARA_LINHA)
     {
     }
     pararMotores();
@@ -158,6 +235,23 @@ void loop()
     virarDireita90();
     ignorarVerdePor(500);
     estado = SEGUIR_LINHA;
+    break;
+  case SUBIR_RAMPA:
+    if (lerAcelerometroX() < -LIMIAR_RAMPA)
+    {
+      // X ficou negativo → passou o topo → está a descer
+      estado = DESCER_RAMPA;
+      break;
+    }
+    seguirLinhaSubida(erro);
+    break;
+  case DESCER_RAMPA:
+    if (lerAcelerometroX() > -LIMIAR_RAMPA)
+    {
+      estado = SEGUIR_LINHA;
+      break;
+    }
+    seguirLinhaDescida(erro);
     break;
   case PARAR:
     pararMotores();

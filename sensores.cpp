@@ -23,30 +23,34 @@ void sensoresSetup()
   qtr.setSensorPins(SENSOR_PINS, NUM_SENSORS);
 }
 
-void calibrarQTR() {
-    Serial.println("A calibrar... move o robot sobre a linha durante 5s");
-    
-    unsigned long tFim = millis() + 5000;
-    while (millis() < tFim) {
-        qtr.calibrate();  // ← chama continuamente durante 5s
-        delay(10);
-    }
-    
-    pararMotores();
-    
-    Serial.print("Min: ");
-    for (int i = 0; i < NUM_SENSORS; i++) {
-        Serial.print(qtr.calibrationOn.minimum[i]);
-        Serial.print(" ");
-    }
-    Serial.println();
-    Serial.print("Max: ");
-    for (int i = 0; i < NUM_SENSORS; i++) {
-        Serial.print(qtr.calibrationOn.maximum[i]);
-        Serial.print(" ");
-    }
-    Serial.println();
-    Serial.println("Calibração concluída!");
+void calibrarQTR()
+{
+  Serial.println("A calibrar... move o robot sobre a linha durante 5s");
+
+  unsigned long tFim = millis() + 5000;
+  while (millis() < tFim)
+  {
+    qtr.calibrate(); // ← chama continuamente durante 5s
+    delay(10);
+  }
+
+  pararMotores();
+
+  Serial.print("Min: ");
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    Serial.print(qtr.calibrationOn.minimum[i]);
+    Serial.print(" ");
+  }
+  Serial.println();
+  Serial.print("Max: ");
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    Serial.print(qtr.calibrationOn.maximum[i]);
+    Serial.print(" ");
+  }
+  Serial.println();
+  Serial.println("Calibração concluída!");
 }
 
 uint16_t lerPosicaoLinha()
@@ -119,6 +123,14 @@ bool intersecaoDetectada()
   return pretos >= 4; // metade ou mais
 }
 
+bool todosBrancos()
+{
+  for (int i = 0; i < NUM_SENSORS; i++)
+    if (sensorValues[i] < LIMIAR_PRATA)
+      return true;
+  return false;
+}
+
 bool entroncamentoEsq()
 {
   return sensorValues[6] > LIMIAR_PRETO && sensorValues[7] > LIMIAR_PRETO;
@@ -127,4 +139,18 @@ bool entroncamentoEsq()
 bool entroncamentoDir()
 {
   return sensorValues[0] > LIMIAR_PRETO && sensorValues[1] > LIMIAR_PRETO;
+}
+
+bool curvaOuEntroncamento()
+{
+  qtr.readCalibrated(sensorValues);
+
+  bool centraisPretos = sensorValues[3] > 600 || sensorValues[4] > 600;
+  bool pontasBrancos = sensorValues[0] < LIMIAR_PRETO && sensorValues[7] < LIMIAR_PRETO;
+
+  if (centraisPretos && pontasBrancos)
+    return false; // entroncamento → segue em frente
+  if (!centraisPretos && pontasBrancos)
+    return true; // curva → vira 90°
+  return false;  // dúvida → segue em frente
 }

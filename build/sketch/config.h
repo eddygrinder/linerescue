@@ -6,6 +6,16 @@
 #define KP           0.03f
 #define KD           0.0f
 
+// PID subida
+#define VEL_SUBIR    60
+#define KP_SUBIR     0.02f  // afinar empiricamente
+#define KD_SUBIR     0.0f
+
+// PID descida
+#define VEL_DESCER   15
+#define KP_DESCER    0.05f  // mais lento → mais correção necessária
+#define KD_DESCER    0.0f
+
 // ─── QTR ────────────────────────────────────────────────────────
 #define NUM_SENSORS  8
 #define LIMIAR_PRETO 800
@@ -53,7 +63,8 @@
 #define VEL_VIRA   45u
 #define TICKS_25MM  ((uint32_t)(25.0f / (PI * DIAM_RODA) * TICKS_REV))  // ≈ 198
 #define TICKS_11MM  87 // 11mm é a distância do centro do robô à borda da roda, então 22mm é o diâmetro do círculo que a roda percorre ao pivotar
-#define TICKS_CENTRO  218  // QTR parado na linha → avança até centro ficar sobre interseção
+#define TICKS_CENTRO  210  // QTR parado na linha → avança até centro ficar sobre interseção
+#define TICKS_VERDE_PARA_LINHA  158  // QTR sobre verde → centro sobre linha preta
 #define WAIT_VIRA_MS 500
 
 
@@ -61,6 +72,16 @@
 //                        Medido    Com margem
 // Limiares VEML6040 — calibrados empiricamente
 #define LIMIAR_BRANCO_MAX   2000   // W máximo para não ser branco
-#define LIMIAR_PRETO_MAX     825   // W máximo para ser preto
+#define LIMIAR_PRETO_MAX     900   // W máximo para ser preto
 #define LIMIAR_RATIO_VERDE  0.48f  // G/(R+G+B) mínimo para ser verde
 
+// IMU
+#define LIMIAR_RAMPA  1.5f  // m/s² — entre 0.08 (plano) e 1.80 (rampa)
+#define OFFSET_X      0.04f  // valor em repouso
+#define LIMIAR_DEBRIS 0.5f   // acima disto já não é plano
+
+
+// Rampas e obstáculos
+#define VEL_TRANSPOR  50  // debris 3mm
+#define VEL_SUBIR     80  // rampa — mais velocidade para subir
+#define VEL_DESCER    15  // descida rampa — devagar

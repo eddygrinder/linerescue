@@ -25,6 +25,8 @@
                 "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
                 "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
                 "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
+                "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
+                "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
                 "c:\\users\\admin\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\4.8.3",
                 "c:\\users\\admin\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\4.8.3\\arm-none-eabi",
                 "c:\\users\\admin\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1\\arm-none-eabi\\include\\c++\\4.8.3\\backward",
