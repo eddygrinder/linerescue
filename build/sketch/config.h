@@ -87,7 +87,8 @@
 // ─── VL53L0X ─────────────────────────────────────────────────────
 #define DIST_OBSTACULO  200  // mm — distância de deteção do obstáculo (afinar nos treinos)
 
-#define TICKS_DESVIO_LAT   700   // ~17.5cm lateral
-#define TICKS_DESVIO_FREN  1350  // ~34cm frente
+#define VEL_DESVIO_LAT 75   // velocidade lateral para desvio
+#define TICKS_DESVIO_LAT   740   // ~18.5cm lateral
+#define TICKS_DESVIO_FREN  1786  // ~45cm frente
 #define ESQUERDA 0
 #define DIREITA  1

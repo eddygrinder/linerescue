@@ -268,11 +268,16 @@ void loop()
         {
         case 0: // desliza esquerda
             resetEncoders();
-            moverLateral(ESQUERDA, 80);
+            pararMotores();
+            alinharNaLinha();
+            delay(2000); // pausa para estabilizar leitura dos encoders
+            moverLateral(ESQUERDA, VEL_DESVIO_LAT);
             while (ticksMedio() < TICKS_DESVIO_LAT)
             {
             }
             pararMotores();
+            delay(2000); // pausa para estabilizar leitura dos encoders
+
             fase = 1;
             break;
 
@@ -297,11 +302,11 @@ void loop()
 
         case 2: // desliza direita — testa linha
             resetEncoders();
-            moverLateral(DIREITA, VEL_BASE);
+            moverLateral(DIREITA, VEL_DESVIO_LAT);
             while (ticksMedio() < TICKS_DESVIO_LAT * 2)
             {
                 qtr.readCalibrated(sensorValues);
-                if (linhaDetectada())
+                if (sensorValues[3] > LIMIAR_PRETO || sensorValues[4] > LIMIAR_PRETO)
                 {
                     pararMotores();
                     // linha à frente → segue directamente

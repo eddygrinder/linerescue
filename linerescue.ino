@@ -31,6 +31,7 @@ bool verdeRecente = false;
 bool ultimoPretoEsq = false; // para decidir virar para onde no entroncamento
 bool ultimoPretoDto = false; // para decidir virar para onde no entroncamento
 
+
 // ─── SETUP ───────────────────────────────────────────────────────
 void setup()
 {
@@ -262,11 +263,16 @@ void loop()
         {
         case 0: // desliza esquerda
             resetEncoders();
-            moverLateral(ESQUERDA, 80);
+            pararMotores();
+            alinharNaLinha(); // CUIDADO - pode ser necessário retirar
+            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
+            moverLateral(ESQUERDA, VEL_DESVIO_LAT);
             while (ticksMedio() < TICKS_DESVIO_LAT)
             {
             }
             pararMotores();
+            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
+
             fase = 1;
             break;
 
@@ -291,13 +297,15 @@ void loop()
 
         case 2: // desliza direita — testa linha
             resetEncoders();
-            moverLateral(DIREITA, VEL_BASE);
+            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
+            moverLateral(DIREITA, VEL_DESVIO_LAT);
             while (ticksMedio() < TICKS_DESVIO_LAT * 2)
             {
                 qtr.readCalibrated(sensorValues);
-                if (linhaDetectada())
+                if (sensorValues[3] > LIMIAR_PRETO || sensorValues[4] > LIMIAR_PRETO)
                 {
                     pararMotores();
+                    delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos sensores
                     // linha à frente → segue directamente
                     fase = 0;
                     estado = SEGUIR_LINHA;
@@ -305,11 +313,13 @@ void loop()
                 }
             }
             pararMotores();
+            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
             fase = 3;
             break;
 
         case 3: // linha atrás — faz 180°
             fazer180();
+            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
             fase = 4;
             break;
 
@@ -318,6 +328,7 @@ void loop()
             if (sensorValues[3] > LIMIAR_PRETO && sensorValues[4] > LIMIAR_PRETO)
             {
                 pararMotores();
+                delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos sensores
                 virarEsquerda90(); // sempre esq porque contornou pela esq
                 fase = 0;
                 estado = SEGUIR_LINHA;

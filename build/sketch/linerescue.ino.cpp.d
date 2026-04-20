@@ -150,12 +150,4 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\linerescue.ino.cpp.o: \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
  C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_LSM303DLHC/Adafruit_LSM303_U.h \
  C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\vl53.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/Adafruit_VL53L0X.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_api.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_api_strings.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_def.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_device.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_types.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_platform.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_i2c_platform.h \
- C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_VL53L0X\src/vl53l0x_platform_log.h
+ C:\Users\ADMIN\Documents\Arduino\libraries\VL53L0X/VL53L0X.h

@@ -295,10 +295,10 @@
     }
   },
   {
-    "missing_include_h": "Adafruit_VL53L0X.h"
+    "missing_include_h": "VL53L0X.h"
   },
   {
-    "added_include_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src"
+    "added_include_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X"
   },
   {
     "compile": {
@@ -349,7 +349,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\linerescue.ino.cpp",
         "-o",
         "nul"
@@ -408,7 +408,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\encoders.cpp",
         "-o",
         "nul"
@@ -467,7 +467,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\imu.cpp",
         "-o",
         "nul"
@@ -526,7 +526,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\manobras.cpp",
         "-o",
         "nul"
@@ -585,7 +585,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\motores.cpp",
         "-o",
         "nul"
@@ -644,7 +644,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\rgb.cpp",
         "-o",
         "nul"
@@ -703,7 +703,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\seguimento.cpp",
         "-o",
         "nul"
@@ -762,7 +762,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\sensores.cpp",
         "-o",
         "nul"
@@ -821,7 +821,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\sketch\\vl53.cpp",
         "-o",
         "nul"
@@ -880,7 +880,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors\\QTRSensors.cpp",
         "-o",
         "nul"
@@ -939,7 +939,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src\\Wire.cpp",
         "-o",
         "nul"
@@ -998,7 +998,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor\\Adafruit_Sensor.cpp",
         "-o",
         "nul"
@@ -1057,7 +1057,7 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
         "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC\\Adafruit_LSM303_U.cpp",
         "-o",
         "nul"
@@ -1069,9 +1069,9 @@
   },
   {
     "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\Adafruit_VL53L0X.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\Adafruit_VL53L0X.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\Adafruit_VL53L0X.cpp.d"
+      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X\\VL53L0X.cpp",
+      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\VL53L0X\\VL53L0X.cpp.o",
+      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\VL53L0X\\VL53L0X.cpp.d"
     },
     "compile_task": {
       "args": [
@@ -1116,421 +1116,8 @@
         "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
         "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\Adafruit_VL53L0X.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_calibration.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_calibration.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_calibration.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_calibration.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_core.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_core.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_core.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_core.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_ranging.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_ranging.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_ranging.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_ranging.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_strings.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_strings.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\core\\src\\vl53l0x_api_strings.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\core\\src\\vl53l0x_api_strings.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\platform\\src\\vl53l0x_i2c_comms.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\platform\\src\\vl53l0x_i2c_comms.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\platform\\src\\vl53l0x_i2c_comms.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\platform\\src\\vl53l0x_i2c_comms.cpp",
-        "-o",
-        "nul"
-      ]
-    }
-  },
-  {
-    "missing_include_h": ""
-  },
-  {
-    "compile": {
-      "source_path": "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\platform\\src\\vl53l0x_platform.cpp",
-      "object_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\platform\\src\\vl53l0x_platform.cpp.o",
-      "depfile_path": "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\build\\libraries\\Adafruit_VL53L0X\\platform\\src\\vl53l0x_platform.cpp.d"
-    },
-    "compile_task": {
-      "args": [
-        "C:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\4.8.3-2014q1/bin/arm-none-eabi-g++",
-        "-c",
-        "-g",
-        "-Os",
-        "-w",
-        "-std=gnu++11",
-        "-ffunction-sections",
-        "-fdata-sections",
-        "-nostdlib",
-        "-fno-threadsafe-statics",
-        "--param",
-        "max-inline-insns-single=500",
-        "-fno-rtti",
-        "-fno-exceptions",
-        "-w",
-        "-x",
-        "c++",
-        "-E",
-        "-CC",
-        "-mcpu=cortex-m3",
-        "-mthumb",
-        "-DF_CPU=84000000L",
-        "-DARDUINO=10607",
-        "-DARDUINO_SAM_DUE",
-        "-DARDUINO_ARCH_SAM",
-        "-D__SAM3X8E__",
-        "-mthumb",
-        "-DUSB_VID=0x2341",
-        "-DUSB_PID=0x003e",
-        "-DUSBCON",
-        "-DUSB_MANUFACTURER=\"Arduino LLC\"",
-        "-DUSB_PRODUCT=\"Arduino Due\"",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/libsam",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/CMSIS/Include/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\system/CMSIS/Device/ATMEL/",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\cores\\arduino",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\variants\\arduino_due_x",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\QTRSensors",
-        "-IC:\\Users\\ADMIN\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\sam\\1.6.12\\libraries\\Wire\\src",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_Unified_Sensor",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_LSM303DLHC",
-        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src",
-        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\Adafruit_VL53L0X\\src\\platform\\src\\vl53l0x_platform.cpp",
+        "-IC:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X",
+        "C:\\Users\\ADMIN\\Documents\\Arduino\\libraries\\VL53L0X\\VL53L0X.cpp",
         "-o",
         "nul"
       ]
