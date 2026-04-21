@@ -31,7 +31,6 @@ bool verdeRecente = false;
 bool ultimoPretoEsq = false; // para decidir virar para onde no entroncamento
 bool ultimoPretoDto = false; // para decidir virar para onde no entroncamento
 
-
 // ─── SETUP ───────────────────────────────────────────────────────
 void setup()
 {
@@ -263,16 +262,12 @@ void loop()
         {
         case 0: // desliza esquerda
             resetEncoders();
-            pararMotores();
-            alinharNaLinha(); // CUIDADO - pode ser necessário retirar
-            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
             moverLateral(ESQUERDA, VEL_DESVIO_LAT);
             while (ticksMedio() < TICKS_DESVIO_LAT)
             {
             }
             pararMotores();
-            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
-
+            delay(PAUSA_MOTORES_MS);
             fase = 1;
             break;
 
@@ -285,58 +280,55 @@ void loop()
                 if (linhaDetectada())
                 {
                     pararMotores();
-                    virarEsquerda90(); // linha à esquerda → pivota esq
+                    virarEsquerda90();
                     fase = 0;
                     estado = SEGUIR_LINHA;
                     return;
                 }
             }
             pararMotores();
+            delay(PAUSA_MOTORES_MS);
             fase = 2;
             break;
 
-        case 2: // desliza direita — testa linha
+        case 2: // roda 90° dto
+            virarDireita90();
+            delay(PAUSA_MOTORES_MS);
+            fase = 3;
+            break;
+
+        case 3: // desliza esq até livre + avança até linha + pivota esq
+            desviarEAvancar();
+            virarEsquerda90();
+            fase = 4;
+            break;
+
+        case 4: // avança até linha — se não encontrou no caso B
             resetEncoders();
-            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
-            moverLateral(DIREITA, VEL_DESVIO_LAT);
-            while (ticksMedio() < TICKS_DESVIO_LAT * 2)
+            setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+            while (ticksMedio() < TICKS_DESVIO_FREN)
             {
                 qtr.readCalibrated(sensorValues);
-                if (sensorValues[3] > LIMIAR_PRETO || sensorValues[4] > LIMIAR_PRETO)
+                if (linhaDetectada())
                 {
                     pararMotores();
-                    delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos sensores
-                    // linha à frente → segue directamente
                     fase = 0;
                     estado = SEGUIR_LINHA;
                     return;
                 }
             }
             pararMotores();
-            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
-            fase = 3;
+            delay(PAUSA_MOTORES_MS);
+            fase = 5;
             break;
 
-        case 3: // linha atrás — faz 180°
-            fazer180();
-            delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos encoders
-            fase = 4;
-            break;
-
-        case 4: // avança até encontrar linha
-            qtr.readCalibrated(sensorValues);
-            if (sensorValues[3] > LIMIAR_PRETO && sensorValues[4] > LIMIAR_PRETO)
-            {
-                pararMotores();
-                delay(PAUSA_MOTORES_MS); // pausa para estabilizar leitura dos sensores
-                virarEsquerda90(); // sempre esq porque contornou pela esq
-                fase = 0;
-                estado = SEGUIR_LINHA;
-            }
-            else
-            {
-                setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-            }
+        case 5: // roda 90° dto + desliza esq até livre + avança até linha + pivota esq
+            virarDireita90();
+            delay(PAUSA_MOTORES_MS);
+            desviarEAvancar();
+            virarEsquerda90();
+            fase = 0;
+            estado = SEGUIR_LINHA;
             break;
         }
         break;

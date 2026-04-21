@@ -22,8 +22,6 @@ static unsigned long tsInicio = 0; // timestamp do início da janela
 // período de imunidade após manobra — ignora verde durante X ms
 static unsigned long ignorarVerdeAte = 0;
 
-#define JANELA_VERDE_MS 300 // tempo máximo para o 2º sensor confirmar verde
-
 // ── configuração ──────────────────────────────────────────
 // configura o VEML6040 num barramento I2C
 static void configurarSensor(TwoWire &bus)
@@ -74,8 +72,8 @@ void rgbUpdate()
     anteriorDto = _corDto;
 
     // classifica cor actual pelo valor absoluto de G
-    _corEsq = (g_esq > 450 && g_esq < 700) ? COR_VERDE : COR_BRANCO;
-    _corDto = (g_dto > 450 && g_dto < 700) ? COR_VERDE : COR_BRANCO;
+    _corEsq = (g_esq > VERDE_G_MIN && g_esq < VERDE_G_MAX) ? COR_VERDE : COR_BRANCO;
+    _corDto = (g_dto > VERDE_G_MIN && g_dto < VERDE_G_MAX) ? COR_VERDE : COR_BRANCO;
 
     // durante período de imunidade — limpa flags e sai
     if (millis() < ignorarVerdeAte)

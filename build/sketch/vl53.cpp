@@ -4,11 +4,14 @@
 
 static VL53L0X sensor;
 
-void vl53Setup() {
-    sensor.setTimeout(500);
-    if (!sensor.init()) {
+void vl53Setup()
+{
+    sensor.setTimeout(VL53_TIMEOUT_MS);
+    if (!sensor.init())
+    {
         Serial.println("VL53L0X não encontrado!");
-        while(1);
+        while (1)
+            ;
     }
     // descomenta conforme necessário nos treinos:
     // sensor.setSignalRateLimit(0.1);  // LONG_RANGE
@@ -16,12 +19,15 @@ void vl53Setup() {
     // sensor.setMeasurementTimingBudget(200000);  // HIGH_ACCURACY
 }
 
-uint16_t lerDistancia() {
+uint16_t lerDistancia()
+{
     uint16_t d = sensor.readRangeSingleMillimeters();
-    if (sensor.timeoutOccurred()) return 8190;
+    if (sensor.timeoutOccurred())
+        return 8190;
     return d;
 }
 
-bool obstaculoDetectado() {
+bool obstaculoDetectado()
+{
     return lerDistancia() < DIST_OBSTACULO;
 }

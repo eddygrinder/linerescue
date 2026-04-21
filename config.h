@@ -27,7 +27,7 @@
 // ★ VEL_SUBIR: velocidade na subida da rampa
 //   - Aumentar se o robot para a meio da subida
 //   - Diminuir se o robot sai da linha na subida
-#define VEL_SUBIR 80
+#define VEL_SUBIR 200
 #define KP_SUBIR 0.02f
 #define KD_SUBIR 0.0f
 
@@ -133,7 +133,7 @@
 // ★ VEL_TRANSPOR: velocidade para transpor debris e speed bumps
 //   - Aumentar se o robot não consegue passar por cima
 //   - Diminuir se o robot sai da linha após passar
-#define VEL_TRANSPOR 50
+#define VEL_TRANSPOR 100
 
 #define VL53_TIMEOUT_MS  500  // timeout do sensor de distância (ms)
 

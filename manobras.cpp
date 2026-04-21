@@ -3,6 +3,7 @@
 #include "encoders.h"
 #include "config.h"
 #include "sensores.h"
+#include "vl53.h"
 
 void virarEsquerda90()
 {
@@ -94,4 +95,25 @@ void lateralEsquerda(int vel)
 void lateraldireita(int vel)
 {
     setAllMotors(-vel, vel, vel, -vel);
+}
+
+// manobras.cpp
+void desviarEAvancar()
+{
+    // desliza esq enquanto vê obstáculo
+    while (obstaculoDetectado())
+    {
+        moverLateral(ESQUERDA, VEL_DESVIO_LAT);
+        delay(50);
+    }
+    pararMotores();
+    delay(PAUSA_MOTORES_MS);
+
+    // avança até encontrar linha
+    setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+    while (!linhaDetectada())
+    {
+        qtr.readCalibrated(sensorValues);
+    }
+    pararMotores();
 }
