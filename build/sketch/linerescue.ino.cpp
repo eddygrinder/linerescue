@@ -12,32 +12,27 @@
 // ─── ESTADOS ─────────────────────────────────────────────────────
 enum Estado
 {
-    CALIBRAR,
     SEGUIR_LINHA,
-    DESVIAR,      // reservado — VL53L0X
-    SUBIR_RAMPA,  // reservado — acelerómetro
-    DESCER_RAMPA, // reservado — acelerómetro
-    ENTR_ESQ,     // reservado — sensores da esquerda veem linha e os da direita não
-    ENTR_DTO,     // reservado — sensores da direita veem linha e os da esquerda não
-    CRUZAMENTO,   // reservado — QTR padrão
-    INVERSAO,     // reservado — ambos sensores veem verde,
-    ATRAVESSAR,   // reservado — atravessa a linha às cegas até sair do preto
-    PARAR,
-    VERIFICAR_INTERSECAO, // reservado — entroncamento detectado, verificar se tem cor e decidir o que fazer
-    VERIFICAR_CURVA
+    DESVIAR,
+    SUBIR_RAMPA,
+    DESCER_RAMPA,
+    ENTR_ESQ,
+    ENTR_DTO,
+    VERIFICAR_INTERSECAO,
+    PARAR
 };
+Estado estado;
 
-Estado estado = CALIBRAR;
 bool verdeRecente = false;
 bool ultimoPretoEsq = false; // para decidir virar para onde no entroncamento
 bool ultimoPretoDto = false; // para decidir virar para onde no entroncamento
 
 // ─── SETUP ───────────────────────────────────────────────────────
-#line 35 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 30 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup();
-#line 77 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 72 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void loop();
-#line 35 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
+#line 30 "C:\\Users\\ADMIN\\Documents\\GitHub\\linerescue\\linerescue.ino"
 void setup()
 {
     Serial.begin(115200);
@@ -102,12 +97,22 @@ void loop()
     {
         if (linha && (ticksMedio() - ticksAntes) < 3)
         {
-            setAllMotors(VEL_TRANSPOR, VEL_TRANSPOR, VEL_TRANSPOR, VEL_TRANSPOR);
-            delay(500);
-            if (naRampa())
-                estado = SUBIR_RAMPA;
+            // tenta transpor com velocidade de debris primeiro
+            setAllMotors(VEL_TRANSPOR_DEBRIS, VEL_TRANSPOR_DEBRIS,
+                         VEL_TRANSPOR_DEBRIS, VEL_TRANSPOR_DEBRIS);
+            delay(300);
+
+            if (!linhaDetectada())
+            {
+                // ainda bloqueado — pode ser rampa, aumenta velocidade
+                setAllMotors(VEL_TRANSPOR_RAMPA, VEL_TRANSPOR_RAMPA,
+                             VEL_TRANSPOR_RAMPA, VEL_TRANSPOR_RAMPA);
+                delay(300);
+                if (naRampa())
+                    estado = SUBIR_RAMPA;
+            }
         }
-        ticksAntes = ticksMedio(); // ← só aqui
+        ticksAntes = ticksMedio();
         tBloqueio = millis();
     }
 
@@ -266,17 +271,11 @@ void loop()
 
         switch (fase)
         {
-        case 0: // desliza esquerda
-            resetEncoders();
-            moverLateral(ESQUERDA, VEL_DESVIO_LAT);
-            while (ticksMedio() < TICKS_DESVIO_LAT)
-            {
-            }
-            pararMotores();
+        case 0: // desliza esquerda até não ver obstáculo + meio robot
+            deslizarControladoEsq();
             delay(PAUSA_MOTORES_MS);
             fase = 1;
             break;
-
         case 1: // avança — testa linha
             resetEncoders();
             setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
@@ -298,18 +297,25 @@ void loop()
             break;
 
         case 2: // roda 90° dto
+            resetEncoders();
+            setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
+            while (ticksMedio() < TICKS_MEIO_ROBOT)
+            {
+            } // ~8cm de folga
+            pararMotores();
+            delay(PAUSA_MOTORES_MS);
             virarDireita90();
             delay(PAUSA_MOTORES_MS);
             fase = 3;
             break;
 
         case 3: // desliza esq até livre + avança até linha + pivota esq
-            desviarEAvancar();
-            virarEsquerda90();
+            deslizarControladoEsq();
+            delay(PAUSA_MOTORES_MS);
             fase = 4;
             break;
 
-        case 4: // avança até linha — se não encontrou no caso B
+        case 4: // avança testando linha — obstáculo do lado direito
             resetEncoders();
             setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
             while (ticksMedio() < TICKS_DESVIO_FREN)
@@ -318,6 +324,7 @@ void loop()
                 if (linhaDetectada())
                 {
                     pararMotores();
+                    virarEsquerda90(); // linha à esq → enquadra
                     fase = 0;
                     estado = SEGUIR_LINHA;
                     return;
@@ -327,12 +334,11 @@ void loop()
             delay(PAUSA_MOTORES_MS);
             fase = 5;
             break;
-
-        case 5: // roda 90° dto + desliza esq até livre + avança até linha + pivota esq
+        case 5: // case 5: // roda 90° dto → testa obstáculo → desliza esq → avança até linha → pivota esq
             virarDireita90();
             delay(PAUSA_MOTORES_MS);
-            desviarEAvancar();
-            virarEsquerda90();
+            desviarEAvancar(); // desliza esq até livre + avança até linha
+            virarEsquerda90(); // enquadra com a linha
             fase = 0;
             estado = SEGUIR_LINHA;
             break;

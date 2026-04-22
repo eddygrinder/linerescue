@@ -4,6 +4,7 @@
 #include "config.h"
 #include "sensores.h"
 #include "vl53.h"
+#include "imu.h"
 
 void virarEsquerda90()
 {
@@ -87,9 +88,46 @@ void spinEsquerda(int vel)
     setAllMotors(-vel, vel, -vel, vel);
 }
 
-void lateralEsquerda(int vel)
+void deslizarControladoEsq()
 {
-    setAllMotors(vel, -vel, -vel, vel);
+    float headingRef = getHeading();
+
+    while (obstaculoDetectado())
+    {
+        float desvio = getHeading() - headingRef;
+        if (desvio > 180)
+            desvio -= 360;
+        if (desvio < -180)
+            desvio += 360;
+
+        int correcao = (int)(desvio * 1.5f); // afinar empiricamente
+
+        // padrão lateral esquerda com correcção
+        setAllMotors(
+            -VEL_DESVIO_LAT - correcao,
+            +VEL_DESVIO_LAT - correcao,
+            +VEL_DESVIO_LAT + correcao,
+            -VEL_DESVIO_LAT + correcao);
+        delay(20);
+    }
+    // mais meio robot + 5mm
+    resetEncoders();
+    while (ticksMedio() < TICKS_MEIO_ROBOT + TICKS_EXTRA)
+    {
+        float desvio = getHeading() - headingRef;
+        if (desvio > 180)
+            desvio -= 360;
+        if (desvio < -180)
+            desvio += 360;
+        int correcao = (int)(desvio * 1.5f);
+        setAllMotors(
+            -VEL_DESVIO_LAT - correcao,
+            +VEL_DESVIO_LAT - correcao,
+            +VEL_DESVIO_LAT + correcao,
+            -VEL_DESVIO_LAT + correcao);
+        delay(20);
+    }
+    pararMotores();
 }
 
 void lateraldireita(int vel)
@@ -98,21 +136,12 @@ void lateraldireita(int vel)
 }
 
 // manobras.cpp
-void desviarEAvancar()
-{
-    // desliza esq enquanto vê obstáculo
-    while (obstaculoDetectado())
-    {
-        moverLateral(ESQUERDA, VEL_DESVIO_LAT);
-        delay(50);
-    }
-    pararMotores();
-    delay(PAUSA_MOTORES_MS);
-
+void desviarEAvancar() {
+    deslizarControladoEsq();  // substitui o while(obstaculoDetectado()) anterior
+    
     // avança até encontrar linha
     setAllMotors(VEL_BASE, VEL_BASE, VEL_BASE, VEL_BASE);
-    while (!linhaDetectada())
-    {
+    while (!linhaDetectada()) {
         qtr.readCalibrated(sensorValues);
     }
     pararMotores();

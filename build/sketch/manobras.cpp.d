@@ -144,4 +144,8 @@ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\manobras.cpp.o: \
  C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\vl53.h \
  C:\Users\ADMIN\Documents\Arduino\libraries\VL53L0X/VL53L0X.h \
  C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\libraries\Wire\src/Wire.h \
- C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\system/libsam/include/twi.h \
+ C:\Users\ADMIN\Documents\GitHub\linerescue\build\sketch\imu.h \
+ C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_Unified_Sensor/Adafruit_Sensor.h \
+ C:\Users\ADMIN\AppData\Local\Arduino15\packages\arduino\hardware\sam\1.6.12\cores\arduino/Print.h \
+ C:\Users\ADMIN\Documents\Arduino\libraries\Adafruit_LSM303DLHC/Adafruit_LSM303_U.h

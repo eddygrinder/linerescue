@@ -6,3 +6,4 @@
 void imuSetup();
 float lerAcelerometroX();
 bool naRampa();
+float getHeading();

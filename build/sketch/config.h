@@ -29,7 +29,7 @@
 //   - Aumentar se o robot para a meio da subida
 //   - Diminuir se o robot sai da linha na subida
 #define VEL_SUBIR 200
-#define KP_SUBIR 0.02f
+#define KP_SUBIR 0.03f
 #define KD_SUBIR 0.0f
 
 // ★ VEL_DESCER: velocidade na descida da rampa
@@ -128,13 +128,17 @@
 // ★ LIMIAR_RAMPA: inclinação mínima para considerar que está numa rampa
 //   - Valor plano: ~0.04  |  Valor em rampa: ~3.35
 //   - Ajustar se o robot não deteta a rampa ou deteta falsamente
-#define LIMIAR_RAMPA 1.5f
+#define LIMIAR_RAMPA 0.75f
 
 // ─── OBSTÁCULOS ──────────────────────────────────────────────────
-// ★ VEL_TRANSPOR: velocidade para transpor debris e speed bumps
-//   - Aumentar se o robot não consegue passar por cima
-//   - Diminuir se o robot sai da linha após passar
-#define VEL_TRANSPOR 100
+// ★ VEL_TRANSPOR_RAMPA: velocidade inicial para começar a subir a rampa
+//   - Valor alto — precisa de força para vencer o desnível inicial
+#define VEL_TRANSPOR_RAMPA 150
+
+// ─── OBSTÁCULOS E RAMPAS ─────────────────────────────────────────
+// ★ VEL_TRANSPOR_DEBRIS: velocidade para transpor debris (palitos, 3mm)
+//   - Valor baixo — debris são pequenos
+#define VEL_TRANSPOR_DEBRIS  50
 
 #define VL53_TIMEOUT_MS  500  // timeout do sensor de distância (ms)
 
@@ -147,6 +151,10 @@
 // ★ VEL_DESVIO_LAT: velocidade do movimento lateral para contornar obstáculo
 //   - Diminuir se o robot desvia muito durante o deslize
 #define VEL_DESVIO_LAT 75
+
+#define TICKS_MEIO_ROBOT  325  // ~8.5cm (8cm + 5mm)
+#define TICKS_EXTRA 30      // 5 mm - 20 ticks extra para garantir que o robot ultrapassa o obstáculo
+
 
 // ★ TICKS_DESVIO_LAT: distância lateral de desvio em ticks (~18.5cm)
 //   - Ajustar conforme a largura do obstáculo real na prova
